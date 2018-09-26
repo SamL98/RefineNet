@@ -1,0 +1,137 @@
+
+
+
+=====================================================================
+gen ds_info
+ds_config:
+         use_dummy_gt: 0
+      use_custom_data: 0
+              ds_name: 'PascalContext'
+       gen_ds_info_fn: [function_handle]
+    ds_info_cache_dir: '../datasets/PascalContext'
+
+file not exist:../datasets/PascalContext/my_dataset_info.mat
+generating new masks encoded by class indexes...
+save class_idxes_mask_data(1/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_1_train_000001_img.png
+save class_idxes_mask_data(101/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_101_train_000101_img.png
+save class_idxes_mask_data(201/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_201_train_000201_img.png
+save class_idxes_mask_data(301/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_301_train_000301_img.png
+save class_idxes_mask_data(401/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_401_train_000401_img.png
+save class_idxes_mask_data(501/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_501_train_000501_img.png
+save class_idxes_mask_data(601/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_601_train_000601_img.png
+save class_idxes_mask_data(701/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_701_train_000701_img.png
+save class_idxes_mask_data(801/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_801_train_000801_img.png
+save class_idxes_mask_data(901/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_901_train_000901_img.png
+save class_idxes_mask_data(1001/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_1001_train_001001_img.png
+save class_idxes_mask_data(1101/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_1101_train_001101_img.png
+save class_idxes_mask_data(1201/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_1201_train_001201_img.png
+save class_idxes_mask_data(1301/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_1301_train_001301_img.png
+save class_idxes_mask_data(1401/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_1401_train_001401_img.png
+save class_idxes_mask_data(1501/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_1501_train_001501_img.png
+save class_idxes_mask_data(1601/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_1601_train_001601_img.png
+save class_idxes_mask_data(1701/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_1701_train_001701_img.png
+save class_idxes_mask_data(1801/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_1801_train_001801_img.png
+save class_idxes_mask_data(1901/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_1901_train_001901_img.png
+save class_idxes_mask_data(2001/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_2001_train_002001_img.png
+save class_idxes_mask_data(2101/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_2101_train_002101_img.png
+save class_idxes_mask_data(2201/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_2201_train_002201_img.png
+save class_idxes_mask_data(2301/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_2301_train_002301_img.png
+save class_idxes_mask_data(2401/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_2401_train_002401_img.png
+save class_idxes_mask_data(2501/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_2501_train_002501_img.png
+save class_idxes_mask_data(2601/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_2601_train_002601_img.png
+save class_idxes_mask_data(2701/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_2701_train_002701_img.png
+save class_idxes_mask_data(2801/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_2801_train_002801_img.png
+save class_idxes_mask_data(2901/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_2901_train_002901_img.png
+save class_idxes_mask_data(3001/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_3001_train_003001_img.png
+save class_idxes_mask_data(3101/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_3101_train_003101_img.png
+save class_idxes_mask_data(3201/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_3201_train_003201_img.png
+save class_idxes_mask_data(3301/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_3301_train_003301_img.png
+save class_idxes_mask_data(3401/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_3401_train_003401_img.png
+save class_idxes_mask_data(3501/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_3501_train_003501_img.png
+save class_idxes_mask_data(3601/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_3601_train_003601_img.png
+save class_idxes_mask_data(3701/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_3701_train_003701_img.png
+save class_idxes_mask_data(3801/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_3801_train_003801_img.png
+save class_idxes_mask_data(3901/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_3901_train_003901_img.png
+save class_idxes_mask_data(4001/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_4001_val_000003_img.png
+save class_idxes_mask_data(4101/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_4101_val_000103_img.png
+save class_idxes_mask_data(4201/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_4201_val_000203_img.png
+save class_idxes_mask_data(4301/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_4301_val_000303_img.png
+save class_idxes_mask_data(4401/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_4401_val_000403_img.png
+save class_idxes_mask_data(4501/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_4501_val_000503_img.png
+save class_idxes_mask_data(4601/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_4601_val_000603_img.png
+save class_idxes_mask_data(4701/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_4701_val_000703_img.png
+save class_idxes_mask_data(4801/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_4801_val_000803_img.png
+save class_idxes_mask_data(4901/4998), file:../datasets/PascalContext/my_class_idxes_mask/img_idx_4901_val_000903_img.png
+file exist, save to new name.
+save_file:../datasets/PascalContext/my_dataset_info_new.mat
+
+
+
+=====================================================================
+run network
+train_opts:
+                             use_gpu: 0
+                             gpu_idx: 1
+            input_img_short_edge_min: 450
+            input_img_short_edge_max: 1100
+                     input_img_scale: 1
+                        use_dummy_gt: 0
+                      root_cache_dir: '../cache_data/PascalContext/model_20180926163314'
+                          model_name: 'model_20180926163314'
+                        run_dir_name: 'main'
+                       run_file_name: 'demo_refinenet_train'
+                         run_evaonly: 0
+                  trained_model_path: []
+                       learning_rate: 5.0000e-04
+                           epoch_num: 600
+                      cache_data_mem: 0
+                       crop_box_size: 400
+                        eva_run_step: 5
+                       snapshot_step: 1
+               init_resnet_layer_num: 50
+                      gen_network_fn: @gen_network_main
+                     gen_net_opts_fn: [function_handle]
+                           eva_param: [1×1 struct]
+                get_batch_ds_info_fn: [function_handle]
+                epoch_model_cache_fn: [function_handle]
+                     batch_disp_step: 0.2000
+                     net_run_verbose: 0
+                          batch_size: 1
+               bnorm_moment_type_trn: 'global'
+               bnorm_moment_type_tst: 'global'
+                     optimizer_param: [1×1 struct]
+                    model_cache_step: 5
+                            do_train: 1
+                          do_eva_val: 1
+                      do_cache_model: 1
+                       fig_plot_step: 1
+                     input_net_do_bp: 1
+                epoch_task_subsample: 1
+                  epoch_task_num_min: 1000
+                  epoch_task_num_max: 2000
+        epoch_run_max_task_one_class: 100
+           epoch_task_gen_type_train: 'class_sample'
+                     data_aug_config: [1×1 struct]
+                    data_crop_config: [1×1 struct]
+         input_featnet_lr_multiplier: 0.1000
+                net_input_img_scales: 1.2000
+                       refine_config: [1×1 struct]
+               input_featnet_configs: {[1×1 struct]}
+                         loss_config: [1×1 struct]
+                     model_cache_dir: '../cache_data/PascalContext/model_20180926163314/model_cache'
+                  model_snapshot_dir: '../cache_data/PascalContext/model_20180926163314/model_cache/snapshot'
+                       eva_run_start: 5
+                     eva_epoch_idxes: [1×120 double]
+    model_cache_epoch_idxes_snapshot: [1×600 double]
+             model_cache_epoch_idxes: [1×120 double]
+                        net_run_opts: [1×1 struct]
+
+train_opts.eva_param:
+                      class_info: [1×1 struct]
+         predict_result_dir_mask: '../cache_data/PascalContext/model_20180926163314/predict_result_mask'
+         predict_result_dir_full: '../cache_data/PascalContext/model_20180926163314/predict_result_full'
+    skip_existing_prediction_eva: 0
+               save_predict_mask: 0
+        save_predict_result_full: 0
+        eva_densecrf_postprocess: 0
+

@@ -1,0 +1,248 @@
+
+
+-------------------------------------------------------------
+
+prepare_running_model_evaonly...
+load trained model:
+../model_trained/refinenet_res101_voc2012.mat
+check model: ../model_trained/refinenet_res101_voc2012.mat 
+file exist:../model_trained/refinenet_res101_voc2012.mat
+processing dag_net for loading, group_idx:3, group_name: featnet_1
+processing dag_net for loading, group_idx:4, group_name: refinenets
+model loaded from: ../model_trained/refinenet_res101_voc2012.mat
+
+
+-------------------------------------------------------------
+
+
+
+--------------------------------------------------
+
+conduct prediction using image scale: 0.40  (current scale / total scales: 1/5) 
+
+--batch_info, iter:1, epoch:1(total:1), finished_task:0, epoch_task:14, total_task:14, run_type:evaluate, split:val
+--batch_info, gpu:0, time:3.1 (forw:1.9, backw:0.0, net:2.6, eva:0.6), data_load_time:0.5, obj:0.67499
+--batch_info, dir: main, file: demo_predict_mscale_voc
+--batch_info, model_name: result_20180919120050_predict_custom_data
+--batch_info, input_scale:0.4, net_scales:[1.2], chained_pool:0(size:[]), valid_node:1.00, class:22 
+--batch_info, img_size:[181,283](input:[181,283], aug:[]), data_aug:(scale:[](range:[]), flip:[]), crop:[]
+--batch_info, net_input:[217,340,3,1], feat_inputpaths:[7,11,2048][14,22,1024][28,43,512][55,85,256], net_output:[55,85]
+
+--batch_info, iter:4, epoch:1(total:1), finished_task:3, epoch_task:14, total_task:14, run_type:evaluate, split:val
+--batch_info, gpu:0, time:1.2 (forw:1.1, backw:0.0, net:1.2, eva:0.1), data_load_time:0.0, obj:1.31151
+--batch_info, dir: main, file: demo_predict_mscale_voc
+--batch_info, model_name: result_20180919120050_predict_custom_data
+--batch_info, input_scale:0.4, net_scales:[1.2], chained_pool:0(size:[]), valid_node:1.00, class:22 
+--batch_info, img_size:[180,272](input:[180,272], aug:[]), data_aug:(scale:[](range:[]), flip:[]), crop:[]
+--batch_info, net_input:[216,326,3,1], feat_inputpaths:[7,11,2048][14,21,1024][27,41,512][54,82,256], net_output:[54,82]
+
+--batch_info, iter:7, epoch:1(total:1), finished_task:6, epoch_task:14, total_task:14, run_type:evaluate, split:val
+--batch_info, gpu:0, time:1.1 (forw:1.0, backw:0.0, net:1.1, eva:0.1), data_load_time:0.0, obj:0.97075
+--batch_info, dir: main, file: demo_predict_mscale_voc
+--batch_info, model_name: result_20180919120050_predict_custom_data
+--batch_info, input_scale:0.4, net_scales:[1.2], chained_pool:0(size:[]), valid_node:1.00, class:22 
+--batch_info, img_size:[180,240](input:[180,240], aug:[]), data_aug:(scale:[](range:[]), flip:[]), crop:[]
+--batch_info, net_input:[216,288,3,1], feat_inputpaths:[7,9,2048][14,18,1024][27,36,512][54,72,256], net_output:[54,72]
+
+--batch_info, iter:10, epoch:1(total:1), finished_task:9, epoch_task:14, total_task:14, run_type:evaluate, split:val
+--batch_info, gpu:0, time:1.1 (forw:1.1, backw:0.0, net:1.1, eva:0.1), data_load_time:0.0, obj:1.02372
+--batch_info, dir: main, file: demo_predict_mscale_voc
+--batch_info, model_name: result_20180919120050_predict_custom_data
+--batch_info, input_scale:0.4, net_scales:[1.2], chained_pool:0(size:[]), valid_node:1.00, class:22 
+--batch_info, img_size:[180,268](input:[180,268], aug:[]), data_aug:(scale:[](range:[]), flip:[]), crop:[]
+--batch_info, net_input:[216,322,3,1], feat_inputpaths:[7,11,2048][14,21,1024][27,41,512][54,81,256], net_output:[54,81]
+
+--batch_info, iter:13, epoch:1(total:1), finished_task:12, epoch_task:14, total_task:14, run_type:evaluate, split:val
+--batch_info, gpu:0, time:1.2 (forw:1.1, backw:0.0, net:1.1, eva:0.1), data_load_time:0.0, obj:1.16546
+--batch_info, dir: main, file: demo_predict_mscale_voc
+--batch_info, model_name: result_20180919120050_predict_custom_data
+--batch_info, input_scale:0.4, net_scales:[1.2], chained_pool:0(size:[]), valid_node:1.00, class:22 
+--batch_info, img_size:[180,274](input:[180,274], aug:[]), data_aug:(scale:[](range:[]), flip:[]), crop:[]
+--batch_info, net_input:[216,329,3,1], feat_inputpaths:[7,11,2048][14,21,1024][27,42,512][54,83,256], net_output:[54,83]
+
+==epoch_info, epoch:1, epoch_time:17.1, config_time:0.0, obj:1.155019, run_type:evaluate, split:val
+
+
+--------------------------------------------------
+
+results are saved in:
+../cache_data/test_examples_voc/result_20180919120050_predict_custom_data/predict_result_1
+
+
+--------------------------------------------------
+
+conduct prediction using image scale: 0.60  (current scale / total scales: 2/5) 
+
+--batch_info, iter:1, epoch:1(total:1), finished_task:0, epoch_task:14, total_task:14, run_type:evaluate, split:val
+--batch_info, gpu:0, time:2.4 (forw:2.3, backw:0.0, net:2.4, eva:0.1), data_load_time:0.0, obj:0.75368
+--batch_info, dir: main, file: demo_predict_mscale_voc
+--batch_info, model_name: result_20180919120050_predict_custom_data
+--batch_info, input_scale:0.6, net_scales:[1.2], chained_pool:0(size:[]), valid_node:1.00, class:22 
+--batch_info, img_size:[270,424](input:[270,424], aug:[]), data_aug:(scale:[](range:[]), flip:[]), crop:[]
+--batch_info, net_input:[324,509,3,1], feat_inputpaths:[11,16,2048][21,32,1024][41,64,512][81,128,256], net_output:[81,128]
+
+--batch_info, iter:4, epoch:1(total:1), finished_task:3, epoch_task:14, total_task:14, run_type:evaluate, split:val
+--batch_info, gpu:0, time:2.5 (forw:2.4, backw:0.0, net:2.5, eva:0.1), data_load_time:0.0, obj:1.61285
+--batch_info, dir: main, file: demo_predict_mscale_voc
+--batch_info, model_name: result_20180919120050_predict_custom_data
+--batch_info, input_scale:0.6, net_scales:[1.2], chained_pool:0(size:[]), valid_node:1.00, class:22 
+--batch_info, img_size:[270,407](input:[270,407], aug:[]), data_aug:(scale:[](range:[]), flip:[]), crop:[]
+--batch_info, net_input:[324,488,3,1], feat_inputpaths:[11,16,2048][21,31,1024][41,61,512][81,122,256], net_output:[81,122]
+
+--batch_info, iter:7, epoch:1(total:1), finished_task:6, epoch_task:14, total_task:14, run_type:evaluate, split:val
+--batch_info, gpu:0, time:2.5 (forw:2.4, backw:0.0, net:2.5, eva:0.1), data_load_time:0.0, obj:1.16721
+--batch_info, dir: main, file: demo_predict_mscale_voc
+--batch_info, model_name: result_20180919120050_predict_custom_data
+--batch_info, input_scale:0.6, net_scales:[1.2], chained_pool:0(size:[]), valid_node:1.00, class:22 
+--batch_info, img_size:[270,360](input:[270,360], aug:[]), data_aug:(scale:[](range:[]), flip:[]), crop:[]
+--batch_info, net_input:[324,432,3,1], feat_inputpaths:[11,14,2048][21,27,1024][41,54,512][81,108,256], net_output:[81,108]
+
+--batch_info, iter:10, epoch:1(total:1), finished_task:9, epoch_task:14, total_task:14, run_type:evaluate, split:val
+--batch_info, gpu:0, time:2.6 (forw:2.5, backw:0.0, net:2.6, eva:0.1), data_load_time:0.0, obj:1.19289
+--batch_info, dir: main, file: demo_predict_mscale_voc
+--batch_info, model_name: result_20180919120050_predict_custom_data
+--batch_info, input_scale:0.6, net_scales:[1.2], chained_pool:0(size:[]), valid_node:1.00, class:22 
+--batch_info, img_size:[270,401](input:[270,401], aug:[]), data_aug:(scale:[](range:[]), flip:[]), crop:[]
+--batch_info, net_input:[324,481,3,1], feat_inputpaths:[11,16,2048][21,31,1024][41,61,512][81,121,256], net_output:[81,121]
+
+--batch_info, iter:13, epoch:1(total:1), finished_task:12, epoch_task:14, total_task:14, run_type:evaluate, split:val
+--batch_info, gpu:0, time:2.5 (forw:2.4, backw:0.0, net:2.5, eva:0.1), data_load_time:0.0, obj:1.34532
+--batch_info, dir: main, file: demo_predict_mscale_voc
+--batch_info, model_name: result_20180919120050_predict_custom_data
+--batch_info, input_scale:0.6, net_scales:[1.2], chained_pool:0(size:[]), valid_node:1.00, class:22 
+--batch_info, img_size:[270,411](input:[270,411], aug:[]), data_aug:(scale:[](range:[]), flip:[]), crop:[]
+--batch_info, net_input:[324,493,3,1], feat_inputpaths:[11,16,2048][21,31,1024][41,62,512][81,124,256], net_output:[81,124]
+
+==epoch_info, epoch:1, epoch_time:33.7, config_time:0.0, obj:1.326208, run_type:evaluate, split:val
+
+
+--------------------------------------------------
+
+results are saved in:
+../cache_data/test_examples_voc/result_20180919120050_predict_custom_data/predict_result_2
+
+
+--------------------------------------------------
+
+conduct prediction using image scale: 0.80  (current scale / total scales: 3/5) 
+
+--batch_info, iter:1, epoch:1(total:1), finished_task:0, epoch_task:14, total_task:14, run_type:evaluate, split:val
+--batch_info, gpu:0, time:4.9 (forw:4.8, backw:0.0, net:4.9, eva:0.1), data_load_time:0.0, obj:0.82190
+--batch_info, dir: main, file: demo_predict_mscale_voc
+--batch_info, model_name: result_20180919120050_predict_custom_data
+--batch_info, input_scale:0.8, net_scales:[1.2], chained_pool:0(size:[]), valid_node:1.00, class:22 
+--batch_info, img_size:[361,565](input:[361,565], aug:[]), data_aug:(scale:[](range:[]), flip:[]), crop:[]
+--batch_info, net_input:[433,678,3,1], feat_inputpaths:[14,22,2048][28,43,1024][55,85,512][109,170,256], net_output:[109,170]
+
+--batch_info, iter:4, epoch:1(total:1), finished_task:3, epoch_task:14, total_task:14, run_type:evaluate, split:val
+--batch_info, gpu:0, time:4.2 (forw:4.1, backw:0.0, net:4.2, eva:0.1), data_load_time:0.0, obj:1.69740
+--batch_info, dir: main, file: demo_predict_mscale_voc
+--batch_info, model_name: result_20180919120050_predict_custom_data
+--batch_info, input_scale:0.8, net_scales:[1.2], chained_pool:0(size:[]), valid_node:1.00, class:22 
+--batch_info, img_size:[360,543](input:[360,543], aug:[]), data_aug:(scale:[](range:[]), flip:[]), crop:[]
+--batch_info, net_input:[432,652,3,1], feat_inputpaths:[14,21,2048][27,41,1024][54,82,512][108,163,256], net_output:[108,163]
+{Operation terminated by user during
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('dagnn.Pooling/forward', '/Users/samlerner/Projects/refinenet/libs/matconvnet/matlab/+dagnn/Pooling.m', 10)" style="font-weight:bold">dagnn.Pooling/forward</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/libs/matconvnet/matlab/+dagnn/Pooling.m',10,0)">line 10</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dagnn.Layer/forwardAdvanced', '/Users/samlerner/Projects/refinenet/libs/matconvnet/matlab/+dagnn/Layer.m', 85)" style="font-weight:bold">dagnn.Layer/forwardAdvanced</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/libs/matconvnet/matlab/+dagnn/Layer.m',85,0)">line
+85</a>)
+      outputs = obj.forward(inputs,
+      {net.params(par).value}) ;
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dagnn.DagNN/eval', '/Users/samlerner/Projects/refinenet/libs/matconvnet/matlab/+dagnn/@DagNN/eval.m', 91)" style="font-weight:bold">dagnn.DagNN/eval</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/libs/matconvnet/matlab/+dagnn/@DagNN/eval.m',91,0)">line 91</a>)
+  obj.layers(l).block.forwardAdvanced(obj.layers(l))
+  ;
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cnn_layer_dagnn_wrapper_forward', '/Users/samlerner/Projects/refinenet/main/cnn_layer_dagnn_wrapper_forward.m', 39)" style="font-weight:bold">cnn_layer_dagnn_wrapper_forward</a>
+(<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/cnn_layer_dagnn_wrapper_forward.m',39,0)">line 39</a>)
+    net.eval(input_data) ;
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_forward>do_forward', '/Users/samlerner/Projects/refinenet/main/my_net_forward.m', 140)" style="font-weight:bold">my_net_forward>do_forward</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_forward.m',140,0)">line
+140</a>)
+            output_info=
+            l.forward_fn(input_info,
+            l, work_info_batch) ;
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_forward', '/Users/samlerner/Projects/refinenet/main/my_net_forward.m', 21)" style="font-weight:bold">my_net_forward</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_forward.m',21,0)">line 21</a>)
+    extra_data_info=do_forward(net_info,
+    work_info_batch, data_info,
+    net_run_config,
+    extra_output_layer_idxes);
+
+In
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_batch>do_forward_one_group', '/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m', 250)" style="font-weight:bold">my_net_run_batch>do_forward_one_group</a>
+(<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m',250,0)">line 250</a>)
+        extra_data_info=my_net_forward(retrieve_net_info(group_info,
+        net_config), ...
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_batch>do_run_one_group', '/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m', 73)" style="font-weight:bold">my_net_run_batch>do_run_one_group</a>
+(<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m',73,0)">line 73</a>)
+    do_forward_one_group( net_config,
+    work_info_batch, group_idx);
+
+In
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_batch>do_forward_one_child', '/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m', 315)" style="font-weight:bold">my_net_run_batch>do_forward_one_child</a>
+(<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m',315,0)">line 315</a>)
+    do_run_one_group(net_config,
+    work_info_batch, child_group_idx,
+    'forward');
+
+In
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_batch>do_forward_group_child_chain', '/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m', 119)" style="font-weight:bold">my_net_run_batch>do_forward_group_child_chain</a>
+(<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m',119,0)">line 119</a>)
+            [input_info,
+            need_bp]=do_forward_one_child(
+            net_config, ...
+
+In
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_batch>do_forward_one_group', '/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m', 264)" style="font-weight:bold">my_net_run_batch>do_forward_one_group</a>
+(<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m',264,0)">line 264</a>)
+                do_forward_group_child_chain(
+                work_info_batch,
+                data_info,
+                group_info);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_batch>do_run_one_group', '/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m', 73)" style="font-weight:bold">my_net_run_batch>do_run_one_group</a>
+(<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m',73,0)">line 73</a>)
+    do_forward_one_group( net_config,
+    work_info_batch, group_idx);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_batch>do_run_one_pass', '/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m', 29)" style="font-weight:bold">my_net_run_batch>do_run_one_pass</a>
+(<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m',29,0)">line 29</a>)
+    do_run_one_group(net_config,
+    work_info_batch, group_idx,
+    'forward');
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_batch', '/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m', 15)" style="font-weight:bold">my_net_run_batch</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m',15,0)">line 15</a>)
+    do_run_one_pass(net_config,
+    work_info_batch, group_idx);
+    
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_epoch>do_run_batch', '/Users/samlerner/Projects/refinenet/main/my_net_run_epoch.m', 160)" style="font-weight:bold">my_net_run_epoch>do_run_batch</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_epoch.m',160,0)">line
+160</a>)
+    my_net_run_batch(net_config,
+    work_info_batch);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_epoch', '/Users/samlerner/Projects/refinenet/main/my_net_run_epoch.m', 31)" style="font-weight:bold">my_net_run_epoch</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_epoch.m',31,0)">line 31</a>)
+do_run_batch(opts, imdb, work_info,
+net_config, work_info_epoch);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_tool', '/Users/samlerner/Projects/refinenet/main/my_net_tool.m', 71)" style="font-weight:bold">my_net_tool</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_tool.m',71,0)">line 71</a>)
+            my_net_run_epoch(opts,
+            imdb, work_info_eva_val,
+            net_config);
+
+In
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('demo_predict_mscale_voc>do_predict_and_evaluate', '/Users/samlerner/Projects/refinenet/main/demo_predict_mscale_voc.m', 164)" style="font-weight:bold">demo_predict_mscale_voc>do_predict_and_evaluate</a>
+(<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/demo_predict_mscale_voc.m',164,0)">line 164</a>)
+	my_net_tool(train_opts, imdb,
+        net_config, net_exp_info);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('demo_predict_mscale_voc', '/Users/samlerner/Projects/refinenet/main/demo_predict_mscale_voc.m', 91)" style="font-weight:bold">demo_predict_mscale_voc</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/demo_predict_mscale_voc.m',91,0)">line 91</a>)
+do_predict_and_evaluate(run_config,
+ds_config);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/Applications/MATLAB_R2018a.app/toolbox/matlab/lang/run.m', 91)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/lang/run.m',91,0)">line 91</a>)
+evalin('caller', strcat(script, ';'));
+} 
+load('/Users/samlerner/Projects/refinenet/cache_data/test_examples_voc/result_20180919120050_predict_custom_data/predict_result_1/predict_result_full/2011_003093.mat')

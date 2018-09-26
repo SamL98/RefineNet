@@ -64,8 +64,8 @@ run(fullfile(dir_matConvNet, 'vl_setupnn.m'));
 run_config=[];
 ds_config=[];
 
-run_config.use_gpu=true;
-% run_config.use_gpu=false;
+% run_config.use_gpu=true;
+run_config.use_gpu=false;
 run_config.gpu_idx=1;
 
 % use a random model name:
@@ -79,8 +79,8 @@ model_name=['model_' datestr(now, 'YYYYmmDDHHMMSS')];
 
 
 
-ds_name='voc2012_trainval';
-gen_ds_info_fn=@my_gen_ds_info_voc;
+ds_name='PascalContext';
+gen_ds_info_fn=@my_gen_ds_info_pascalcontext;
 
 
 % control the size of input images

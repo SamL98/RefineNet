@@ -1,0 +1,39 @@
+
+
+
+=====================================================================
+gen ds_info
+ds_config:
+         use_dummy_gt: 0
+      use_custom_data: 0
+              ds_name: 'PascalContext'
+       gen_ds_info_fn: [function_handle]
+    ds_info_cache_dir: '../datasets/PascalContext'
+
+file not exist:../datasets/PascalContext/my_dataset_info.mat
+generating new masks encoded by class indexes...
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_load_file', '/Users/samlerner/Projects/refinenet/main/my_utils/my_load_file.m', 31)" style="font-weight:bold">my_load_file</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_utils/my_load_file.m',31,0)">line 31</a>)
+file not found!
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('load_mask_from_ds_info', '/Users/samlerner/Projects/refinenet/main/load_mask_from_ds_info.m', 17)" style="font-weight:bold">load_mask_from_ds_info</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/load_mask_from_ds_info.m',17,0)">line 17</a>)
+        mask_data = my_load_file(full_mask_file,
+        true);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('process_ds_info_classification', '/Users/samlerner/Projects/refinenet/main/process_ds_info_classification.m', 31)" style="font-weight:bold">process_ds_info_classification</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/process_ds_info_classification.m',31,0)">line 31</a>)
+    mask_data=load_mask_from_ds_info(ds_info,
+    img_idx);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_gen_ds_info_pascalcontext', '/Users/samlerner/Projects/refinenet/main/my_gen_ds_info_pascalcontext.m', 70)" style="font-weight:bold">my_gen_ds_info_pascalcontext</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_gen_ds_info_pascalcontext.m',70,0)">line 70</a>)
+ds_info=process_ds_info_classification(ds_info,
+ds_config);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('gen_dataset_info', '/Users/samlerner/Projects/refinenet/main/gen_dataset_info.m', 15)" style="font-weight:bold">gen_dataset_info</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/gen_dataset_info.m',15,0)">line 15</a>)
+        ds_info=ds_config.gen_ds_info_fn(ds_config);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('demo_refinenet_train', '/Users/samlerner/Projects/refinenet/main/demo_refinenet_train.m', 129)" style="font-weight:bold">demo_refinenet_train</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/demo_refinenet_train.m',129,0)">line 129</a>)
+ds_info=gen_dataset_info(ds_config);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/Applications/MATLAB_R2018a.app/toolbox/matlab/lang/run.m', 91)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/lang/run.m',91,0)">line 91</a>)
+evalin('caller', strcat(script, ';'));
+} 
+run demo_refinenet_train.m

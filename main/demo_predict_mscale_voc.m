@@ -15,8 +15,8 @@ run(fullfile(dir_matConvNet, 'vl_setupnn.m'));
 run_config=[];
 ds_config=[];
 
-run_config.use_gpu=true;
-% run_config.use_gpu=false;
+%run_config.use_gpu=true;
+run_config.use_gpu=false;
 run_config.gpu_idx=1;
 
 

@@ -1,0 +1,15 @@
+
+
+
+=====================================================================
+gen ds_info
+ds_config:
+         use_dummy_gt: 0
+      use_custom_data: 0
+              ds_name: 'PascalContext'
+       gen_ds_info_fn: @my_gen_ds_info_pascalcontext
+    ds_info_cache_dir: '../datasets/PascalContext'
+
+file not exist:../datasets/PascalContext/my_dataset_info.mat
+../datasets/PascalContext/Truth/Train
+../datasets/PascalContext/Truth/Val
