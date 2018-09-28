@@ -28,6 +28,7 @@ function eva_result_batch=do_evaluate_mc(opts, work_info_batch, group_idx)
    
     predict_info=one_output_info.mc_predict_info;
     mc_info=predict_info.mc_info;
+    mc_info.class_num = mc_info.class_num-1; % added this line
     mc_scores=predict_info.score_map;
     
     e_num=size(mc_scores, 1)*size(mc_scores, 2);

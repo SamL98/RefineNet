@@ -104,7 +104,7 @@ end
 
 function predict_info=gen_predict_info(mc_info, predict_scores)
         
-    
+
     my_check_valid_numeric(predict_scores);
     map_size=size(predict_scores);
     
@@ -114,6 +114,8 @@ function predict_info=gen_predict_info(mc_info, predict_scores)
     predict_scores=single(predict_scores);
     predict_scores=reshape(predict_scores, [mc_info.node_num, mc_info.class_num]);
     predict_scores=my_softmax(predict_scores);
+    
+    map_size(3) = mc_info.class_num-1; % added this line
     predict_scores=reshape(predict_scores, map_size);
         
     predict_info=[];

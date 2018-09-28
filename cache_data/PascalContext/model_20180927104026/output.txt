@@ -1,0 +1,156 @@
+
+
+
+=====================================================================
+gen ds_info
+ds_config:
+         use_dummy_gt: 0
+      use_custom_data: 0
+              ds_name: 'PascalContext'
+       gen_ds_info_fn: @my_gen_ds_info_pascalcontext
+    ds_info_cache_dir: '../datasets/PascalContext'
+
+file exist:../datasets/PascalContext/my_dataset_info.mat
+load_file:../datasets/PascalContext/my_dataset_info.mat
+
+
+
+=====================================================================
+run network
+train_opts:
+                             use_gpu: 0
+                             gpu_idx: 1
+            input_img_short_edge_min: 450
+            input_img_short_edge_max: 1100
+                     input_img_scale: 1
+                        use_dummy_gt: 0
+                      root_cache_dir: '../cache_data/PascalContext/model_20180927104026'
+                          model_name: 'model_20180927104026'
+                        run_dir_name: 'main'
+                       run_file_name: 'demo_refinenet_train'
+                         run_evaonly: 0
+                  trained_model_path: []
+                       learning_rate: 5.0000e-04
+                           epoch_num: 600
+                      cache_data_mem: 0
+                       crop_box_size: 400
+                        eva_run_step: 5
+                       snapshot_step: 1
+               init_resnet_layer_num: 50
+                      gen_network_fn: @gen_network_main
+                     gen_net_opts_fn: [function_handle]
+                           eva_param: [1×1 struct]
+                get_batch_ds_info_fn: @my_get_batch_ds_info
+                epoch_model_cache_fn: @my_epoch_model_cache
+                     batch_disp_step: 0.2000
+                     net_run_verbose: 0
+                          batch_size: 1
+               bnorm_moment_type_trn: 'global'
+               bnorm_moment_type_tst: 'global'
+                     optimizer_param: [1×1 struct]
+                    model_cache_step: 5
+                            do_train: 1
+                          do_eva_val: 1
+                      do_cache_model: 1
+                       fig_plot_step: 1
+                     input_net_do_bp: 1
+                epoch_task_subsample: 1
+                  epoch_task_num_min: 1000
+                  epoch_task_num_max: 2000
+        epoch_run_max_task_one_class: 100
+           epoch_task_gen_type_train: 'class_sample'
+                     data_aug_config: [1×1 struct]
+                    data_crop_config: [1×1 struct]
+         input_featnet_lr_multiplier: 0.1000
+                net_input_img_scales: 1.2000
+                       refine_config: [1×1 struct]
+               input_featnet_configs: {[1×1 struct]}
+                         loss_config: [1×1 struct]
+                     model_cache_dir: '../cache_data/PascalContext/model_20180927104026/model_cache'
+                  model_snapshot_dir: '../cache_data/PascalContext/model_20180927104026/model_cache/snapshot'
+                       eva_run_start: 5
+                     eva_epoch_idxes: [1×120 double]
+    model_cache_epoch_idxes_snapshot: [1×600 double]
+             model_cache_epoch_idxes: [1×120 double]
+                        net_run_opts: [1×1 struct]
+
+train_opts.eva_param:
+                      class_info: [1×1 struct]
+         predict_result_dir_mask: '../cache_data/PascalContext/model_20180927104026/predict_result_mask'
+         predict_result_dir_full: '../cache_data/PascalContext/model_20180927104026/predict_result_full'
+    skip_existing_prediction_eva: 0
+               save_predict_mask: 0
+        save_predict_result_full: 0
+        eva_densecrf_postprocess: 0
+
+
+
+-------------------------------------------------------------
+
+prepare_running_model...
+check model: ../cache_data/PascalContext/model_20180927104026/model_cache/snapshot 
+file not exist:../cache_data/PascalContext/model_20180927104026/model_cache/snapshot
+model snapshot not existed
+
+ generate network...
+
+load init model:../model_trained/imagenet-resnet-50-dag.mat
+
+
+-------------------------------------------------------------
+
+gen_crop_cache_info...
+<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_forward.m',140,1)">140 </a>            output_info= l.forward_fn(input_info, l, work_info_batch) ;                       
+l
+
+l = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                 type: 'my_custom'
+          custom_type: 'dagnn_wrapper'
+           forward_fn: @cnn_layer_dagnn_wrapper_forward
+          backward_fn: @cnn_layer_dagnn_wrapper_backward
+      layer_update_fn: []
+      input_var_names: {'data'}
+     output_var_names: {4×1 cell}
+    use_single_output: 0
+
+dbcont
+<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_forward.m',140,1)">140 </a>            output_info= l.forward_fn(input_info, l, work_info_batch) ;                       
+l
+
+l = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                 type: 'my_custom'
+          custom_type: 'input_concat'
+           forward_fn: @cnn_layer_path_merge_forward
+          backward_fn: @cnn_layer_path_merge_backward
+      layer_update_fn: []
+    layer_result_name: 'input_path_merge'
+
+dbcont
+<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_forward.m',140,1)">140 </a>            output_info= l.forward_fn(input_info, l, work_info_batch) ;                       
+l
+
+l = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                 type: 'my_custom'
+          custom_type: 'dagnn_wrapper'
+           forward_fn: @cnn_layer_dagnn_wrapper_forward
+          backward_fn: @cnn_layer_dagnn_wrapper_backward
+      layer_update_fn: []
+      input_var_names: {4×1 cell}
+     output_var_names: {'mflow_conv_g4_b3_joint_varout'}
+    use_single_output: 1
+
+dbstop
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dbstop')" style="font-weight:bold">dbstop</a>
+Not enough input arguments.
+} 
+dbquit
+run demo_refinenet_train.m

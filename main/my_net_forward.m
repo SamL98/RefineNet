@@ -136,9 +136,8 @@ for layer_idx=1:layer_num
                     error('Unknown layer type %s', l.type) ;
             end
         else
-            
-            output_info= l.forward_fn(input_info, l, work_info_batch) ;
-                       
+
+            output_info= l.forward_fn(input_info, l, work_info_batch) ;                       
             
         end
 

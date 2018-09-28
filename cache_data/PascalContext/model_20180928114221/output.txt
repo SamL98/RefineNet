@@ -1,0 +1,188 @@
+
+
+
+=====================================================================
+gen ds_info
+ds_config:
+         use_dummy_gt: 0
+      use_custom_data: 0
+              ds_name: 'PascalContext'
+       gen_ds_info_fn: @my_gen_ds_info_pascalcontext
+    ds_info_cache_dir: '../datasets/PascalContext'
+
+file exist:../datasets/PascalContext/my_dataset_info.mat
+load_file:../datasets/PascalContext/my_dataset_info.mat
+
+
+
+=====================================================================
+run network
+train_opts:
+                             use_gpu: 0
+                             gpu_idx: 1
+            input_img_short_edge_min: 450
+            input_img_short_edge_max: 1100
+                     input_img_scale: 1
+                        use_dummy_gt: 0
+                      root_cache_dir: '../cache_data/PascalContext/model_20180928114221'
+                          model_name: 'model_20180928114221'
+                        run_dir_name: 'main'
+                       run_file_name: 'demo_refinenet_train'
+                         run_evaonly: 0
+                  trained_model_path: []
+                       learning_rate: 5.0000e-04
+                           epoch_num: 600
+                      cache_data_mem: 0
+                       crop_box_size: 400
+                        eva_run_step: 5
+                       snapshot_step: 1
+               init_resnet_layer_num: 50
+                      gen_network_fn: @gen_network_main
+                     gen_net_opts_fn: @gen_net_opts_model_type1
+                           eva_param: [1×1 struct]
+                get_batch_ds_info_fn: @my_get_batch_ds_info
+                epoch_model_cache_fn: @my_epoch_model_cache
+                     batch_disp_step: 0.2000
+                     net_run_verbose: 0
+                          batch_size: 1
+               bnorm_moment_type_trn: 'global'
+               bnorm_moment_type_tst: 'global'
+                     optimizer_param: [1×1 struct]
+                    model_cache_step: 5
+                            do_train: 1
+                          do_eva_val: 1
+                      do_cache_model: 1
+                       fig_plot_step: 1
+                     input_net_do_bp: 1
+                epoch_task_subsample: 1
+                  epoch_task_num_min: 1000
+                  epoch_task_num_max: 2000
+        epoch_run_max_task_one_class: 100
+           epoch_task_gen_type_train: 'class_sample'
+                     data_aug_config: [1×1 struct]
+                    data_crop_config: [1×1 struct]
+         input_featnet_lr_multiplier: 0.1000
+                net_input_img_scales: 1.2000
+                       refine_config: [1×1 struct]
+               input_featnet_configs: {[1×1 struct]}
+                         loss_config: [1×1 struct]
+                     model_cache_dir: '../cache_data/PascalContext/model_20180928114221/model_cache'
+                  model_snapshot_dir: '../cache_data/PascalContext/model_20180928114221/model_cache/snapshot'
+                       eva_run_start: 5
+                     eva_epoch_idxes: [1×120 double]
+    model_cache_epoch_idxes_snapshot: [1×600 double]
+             model_cache_epoch_idxes: [1×120 double]
+                        net_run_opts: [1×1 struct]
+
+train_opts.eva_param:
+                      class_info: [1×1 struct]
+         predict_result_dir_mask: '../cache_data/PascalContext/model_20180928114221/predict_result_mask'
+         predict_result_dir_full: '../cache_data/PascalContext/model_20180928114221/predict_result_full'
+    skip_existing_prediction_eva: 0
+               save_predict_mask: 0
+        save_predict_result_full: 0
+        eva_densecrf_postprocess: 0
+
+
+
+-------------------------------------------------------------
+
+prepare_running_model...
+check model: ../cache_data/PascalContext/model_20180928114221/model_cache/snapshot 
+file not exist:../cache_data/PascalContext/model_20180928114221/model_cache/snapshot
+model snapshot not existed
+
+ generate network...
+
+load init model:../model_trained/imagenet-resnet-50-dag.mat
+
+
+-------------------------------------------------------------
+
+gen_crop_cache_info...
+<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/cnn_layer_dense_softmaxloss_forward.m',108,1)">108 </a>    my_check_valid_numeric(predict_scores);
+size(predict_scores)
+
+ans =
+
+   108   108    60
+
+mc_info
+
+mc_info = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                  class_num: 60
+              node_map_size: [108 108]
+                   node_num: 11664
+                      e_num: 11664
+              gt_label_data: [108×108 double]
+    example_non_valid_flags: []
+                valid_e_num: 11664
+
+dbcont
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('reshape')" style="font-weight:bold">reshape</a>
+To RESHAPE the number of elements must not change.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cnn_layer_dense_softmaxloss_forward>gen_predict_info', '/Users/samlerner/Projects/refinenet/main/cnn_layer_dense_softmaxloss_forward.m', 117)" style="font-weight:bold">cnn_layer_dense_softmaxloss_forward>gen_predict_info</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/cnn_layer_dense_softmaxloss_forward.m',117,0)">line
+117</a>)
+    predict_scores=reshape(predict_scores, map_size);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cnn_layer_dense_softmaxloss_forward', '/Users/samlerner/Projects/refinenet/main/cnn_layer_dense_softmaxloss_forward.m', 34)" style="font-weight:bold">cnn_layer_dense_softmaxloss_forward</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/cnn_layer_dense_softmaxloss_forward.m',34,0)">line 34</a>)
+        output_info.mc_predict_info=gen_predict_info(mc_info,
+        tmp_input_info.x);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_forward>do_forward', '/Users/samlerner/Projects/refinenet/main/my_net_forward.m', 140)" style="font-weight:bold">my_net_forward>do_forward</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_forward.m',140,0)">line 140</a>)
+            output_info= l.forward_fn(input_info, l,
+            work_info_batch) ;
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_forward', '/Users/samlerner/Projects/refinenet/main/my_net_forward.m', 21)" style="font-weight:bold">my_net_forward</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_forward.m',21,0)">line 21</a>)
+    extra_data_info=do_forward(net_info, work_info_batch,
+    data_info, net_run_config, extra_output_layer_idxes);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_batch>do_forward_one_group', '/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m', 250)" style="font-weight:bold">my_net_run_batch>do_forward_one_group</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m',250,0)">line 250</a>)
+        extra_data_info=my_net_forward(retrieve_net_info(group_info,
+        net_config), ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_batch>do_run_one_group', '/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m', 73)" style="font-weight:bold">my_net_run_batch>do_run_one_group</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m',73,0)">line 73</a>)
+    do_forward_one_group( net_config, work_info_batch, group_idx);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_batch>do_forward_one_child', '/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m', 315)" style="font-weight:bold">my_net_run_batch>do_forward_one_child</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m',315,0)">line 315</a>)
+    do_run_one_group(net_config, work_info_batch, child_group_idx,
+    'forward');
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_batch>do_forward_group_child_chain', '/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m', 119)" style="font-weight:bold">my_net_run_batch>do_forward_group_child_chain</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m',119,0)">line 119</a>)
+            [input_info, need_bp]=do_forward_one_child( net_config,
+            ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_batch>do_forward_one_group', '/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m', 264)" style="font-weight:bold">my_net_run_batch>do_forward_one_group</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m',264,0)">line 264</a>)
+                do_forward_group_child_chain( work_info_batch,
+                data_info, group_info);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_batch>do_run_one_group', '/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m', 73)" style="font-weight:bold">my_net_run_batch>do_run_one_group</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m',73,0)">line 73</a>)
+    do_forward_one_group( net_config, work_info_batch, group_idx);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_batch>do_run_one_pass', '/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m', 29)" style="font-weight:bold">my_net_run_batch>do_run_one_pass</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m',29,0)">line 29</a>)
+    do_run_one_group(net_config, work_info_batch, group_idx,
+    'forward');
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_batch', '/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m', 15)" style="font-weight:bold">my_net_run_batch</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_batch.m',15,0)">line 15</a>)
+    do_run_one_pass(net_config, work_info_batch, group_idx);
+    
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_epoch>do_run_batch', '/Users/samlerner/Projects/refinenet/main/my_net_run_epoch.m', 160)" style="font-weight:bold">my_net_run_epoch>do_run_batch</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_epoch.m',160,0)">line 160</a>)
+    my_net_run_batch(net_config, work_info_batch);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_run_epoch', '/Users/samlerner/Projects/refinenet/main/my_net_run_epoch.m', 31)" style="font-weight:bold">my_net_run_epoch</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_run_epoch.m',31,0)">line 31</a>)
+do_run_batch(opts, imdb, work_info, net_config, work_info_epoch);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('my_net_tool', '/Users/samlerner/Projects/refinenet/main/my_net_tool.m', 65)" style="font-weight:bold">my_net_tool</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/my_net_tool.m',65,0)">line 65</a>)
+        my_net_run_epoch(opts, imdb, work_info_trn, net_config);
+        
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('demo_refinenet_train', '/Users/samlerner/Projects/refinenet/main/demo_refinenet_train.m', 227)" style="font-weight:bold">demo_refinenet_train</a> (<a href="matlab: opentoline('/Users/samlerner/Projects/refinenet/main/demo_refinenet_train.m',227,0)">line 227</a>)
+my_net_tool(train_opts, imdb, net_config, net_exp_info);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/Applications/MATLAB_R2018a.app/toolbox/matlab/lang/run.m', 91)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/lang/run.m',91,0)">line 91</a>)
+evalin('caller', strcat(script, ';'));
+} 
+run demo_refinenet_train.m
