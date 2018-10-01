@@ -20,10 +20,10 @@ if all(x_size==map_size)
 end
 
 if isa(x, 'gpuArray')
-	x=gpuArray(imresize(gather(x), map_size, 'bicubic'));    
+	x=gpuArray(imresize(gather(x), map_size, 'bilinear'));    
 else
     assert(isa(x, 'single'));
-    x=imresize(x, map_size, 'bicubic');
+    x=imresize(x, map_size, 'bilinear');
 end
 
 end
@@ -64,7 +64,7 @@ if isa(x, 'gpuArray')
     end
 else
     assert(isa(x, 'single'));
-    x=imresize(x, map_size, 'bicubic');
+    x=imresize(x, map_size, 'bilinear');
 end
 
 end

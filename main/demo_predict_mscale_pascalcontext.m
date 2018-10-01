@@ -15,23 +15,23 @@ run(fullfile(dir_matConvNet, 'vl_setupnn.m'));
 run_config=[];
 ds_config=[];
 
-run_config.use_gpu=true;
-% run_config.use_gpu=false;
+%run_config.use_gpu=true;
+run_config.use_gpu=false;
 run_config.gpu_idx=1;
 
 
 %-------------------------------------------------------------------------------------------------------------------------
 % settings for using trained model:
 
-ds_name_subfix='pascalcontext';
+ds_name_subfix='PascalContext';
 
 % result dir:
 result_name=['result_' datestr(now, 'YYYYmmDDHHMMSS') '_predict_custom_data'];
 result_dir=fullfile('../cache_data', ['test_examples_' ds_name_subfix], result_name);
 
 % using a trained model:
-run_config.trained_model_path='../model_trained/refinenet_res101_pascalcontext.mat'; % resnet101 based refinenet
-% run_config.trained_model_path='../model_trained/refinenet_res152_pascalcontext.mat'; % resnet152 based refinenet
+run_config.trained_model_path='../model_trained/refinenet_res101_voc2012.mat'; % resnet101 based refinenet
+% run_config.trained_model_path='../model_trained/refinenet_res152_voc2012.mat'; % resnet152 based refinenet
 
 % provide class_info for the trained model:
 ds_config.class_info=gen_class_info_pascalcontext();
@@ -44,7 +44,7 @@ run_config.input_img_short_edge_max=800;
 
 
 % specify the folder that contains testing images:
-img_data_dir='../datasets/example_imgs_pascalcontext';
+img_data_dir='../datasets/PascalContext/RGB/Test';
 
 % providing ground-truth mask folder for evaluation, or set to empty if not available
 % if the folder of ground-truth masks are provided (an example is shown below), 
@@ -62,8 +62,8 @@ gt_mask_dir=[];
 
 % uncomment the following lines to enable accuracy evaluation, should replace by your folders:
 
-% img_data_dir='../datasets/pascalcontext/images_testonly';
-% gt_mask_dir='../datasets/pascalcontext/gt_testonly';
+% img_data_dir='../datasets/voc2012_trainval/JPEGImages_val';
+% gt_mask_dir='../datasets/voc2012_trainval/SegmentationClass';
 %-------------------------------------------------------------------------------------------------------------------------
 
 
