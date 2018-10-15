@@ -1,11 +1,7 @@
 function ds_info=my_gen_ds_info_pascalcontext(ds_config)
 
-ds_dir=fullfile('../datasets', 'PascalContext');
+ds_dir=fullfile('D:\Datasets\Processed\PascalContext');
 load(fullfile(ds_dir, 'dataset_info.mat'), 'num_train', 'num_val', 'num_test');
-
-% for training on my machine
-num_train=100;
-num_val=100;
 
 img_dir=fullfile(ds_dir, 'RGB');
 mask_dir=fullfile(ds_dir, 'Truth');

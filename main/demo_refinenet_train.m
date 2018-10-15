@@ -64,15 +64,14 @@ run(fullfile(dir_matConvNet, 'vl_setupnn.m'));
 run_config=[];
 ds_config=[];
 
-% run_config.use_gpu=true;
-run_config.use_gpu=false;
+run_config.use_gpu=true;
 run_config.gpu_idx=1;
 
 % use a random model name:
-model_name=['model_' datestr(now, 'YYYYmmDDHHMMSS')];
+% model_name=['model_' datestr(now, 'YYYYmmDDHHMMSS')];
 
 % or specify a model_name for training, if the cached snapshot files existed, it will resume training
-% model_name='model_20161219094311_example';
+model_name='model_20181003180626';
 
 % update the model name when reducing learning rate for training, e.g.,
 % model_name='model_20161219094311_example_epoch70_low_learn_rate';
@@ -101,7 +100,7 @@ ds_config.gen_ds_info_fn=gen_ds_info_fn;
 ds_config.ds_info_cache_dir=fullfile('../datasets', ds_name);
 
 
-run_config.root_cache_dir=fullfile('../cache_data', ds_name, model_name);
+run_config.root_cache_dir=fullfile('E:', 'LERNER', 'refinenet', 'cache_data', model_name);
 mkdir_notexist(run_config.root_cache_dir);
 
 run_config.model_name=model_name;
