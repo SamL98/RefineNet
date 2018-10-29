@@ -15,8 +15,7 @@ run(fullfile(dir_matConvNet, 'vl_setupnn.m'));
 run_config=[];
 ds_config=[];
 
-%run_config.use_gpu=true;
-run_config.use_gpu=false;
+run_config.use_gpu=true;
 run_config.gpu_idx=1;
 
 
@@ -30,7 +29,8 @@ result_name=['result_' datestr(now, 'YYYYmmDDHHMMSS') '_predict_custom_data'];
 result_dir=fullfile('../cache_data', ['test_examples_' ds_name_subfix], result_name);
 
 % using a trained model:
-run_config.trained_model_path='../model_trained/model/epoch_40'; % resnet101 based refinenet
+model_name='model_20181003180626';
+run_config.trained_model_path=fullfile('E:', 'LERNER', 'refinenet', 'cache_data', model_name, 'model_cache', 'epoch_55'); % resnet101 based refinenet
 % run_config.trained_model_path='../model_trained/refinenet_res152_voc2012.mat'; % resnet152 based refinenet
 
 % provide class_info for the trained model:
@@ -44,8 +44,7 @@ run_config.input_img_short_edge_max=800;
 
 
 % specify the folder that contains testing images:
-img_data_dir='../datasets/PascalContext/RGB/Val';
-%img_data_dir='../custom_test';
+img_data_dir=fullfile('..', 'datasets', 'PascalContext', 'RGB', 'Val');
 
 % providing ground-truth mask folder for evaluation, or set to empty if not available
 % if the folder of ground-truth masks are provided (an example is shown below), 
