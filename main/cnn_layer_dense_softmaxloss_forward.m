@@ -64,6 +64,7 @@ end
 
 function mc_info=gen_mc_info(input_info, work_info_batch)
 
+% input_info.x=input_info.x(:,:,2:end) % added
 input_feat_map_size=size(input_info.x);
 node_map_size=input_feat_map_size(1:2);
 node_label_data=do_gen_gt_mask_data(work_info_batch, node_map_size);

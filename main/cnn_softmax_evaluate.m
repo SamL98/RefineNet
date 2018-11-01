@@ -40,6 +40,13 @@ function eva_result_batch=do_evaluate_mc(opts, work_info_batch, group_idx)
     predict_class_idxes=gather(predict_class_idxes);
     
     gt_class_idxes=mc_info.gt_label_data;
+    
+    % added
+    non_bkg_idxes=find(gt_class_idxes);
+    gt_class_idxes=gt_class_idxes(non_bkg_idxes)-1;
+    predict_class_idxes=predict_class_idxes(non_bkg_idxes);
+    % end added
+    
     error_flags=gt_class_idxes~=predict_class_idxes;
     
     non_valid_flags=mc_info.example_non_valid_flags;
