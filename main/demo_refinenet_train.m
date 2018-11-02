@@ -185,7 +185,7 @@ run_config.gen_net_opts_fn=@gen_net_opts_model_type1;
 
 % uncomment the following for debug:
 % select a subset for both training and evaluation.
-ds_info.train_idxes=ds_info.train_idxes(1:5);
+ds_info.train_idxes=ds_info.train_idxes(1:3);
 ds_info.test_idxes=ds_info.train_idxes;
 % run_config.snapshot_step=inf;
 

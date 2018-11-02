@@ -124,18 +124,21 @@ end
 function disp_eva_result(pixel_result, class_info)
 
 fprintf('\n\nCategory result:\n');
-class_num=class_info.class_num;
-class_label_values=class_info.class_label_values;
+
+% changed all of these
+class_num=class_info.class_num-1;
+class_label_values=class_info.class_label_values(2:end);
+class_names=class_info.class_names(2:end);
 
 for c_idx=1:class_num
 
-	one_label_value=class_label_values(c_idx);
-    class_name=class_info.class_names{c_idx};
+	one_label_value=class_label_values(c_idx)-1;
+    class_name=class_names{c_idx};
     
     one_iou=pixel_result.inter_union_score_classes(c_idx);
     one_acc=pixel_result.accuracy_classes(c_idx);
         
-    fprintf('class_idx:%d, label_vale:%d, class_name:%s, pixel_acc:%.4f, IoU:%.4f\n', c_idx, one_label_value, class_name, one_acc, one_iou);
+    fprintf('class_idx:%d, label_value:%d, class_name:%s, pixel_acc:%.4f, IoU:%.4f\n', c_idx, one_label_value, class_name, one_acc, one_iou);
 end
 
 
@@ -146,7 +149,7 @@ end
 function pixel_result=gen_predict_result(pixel_results, class_info)
         
     exclude_class_idxes=class_info.void_class_idxes;
-    class_num=class_info.class_num;
+    class_num=class_info.class_num-1; % normally doesn't have minus one
     img_num=length(pixel_results);
 
     pixel_con_mat=zeros(class_num, class_num);
